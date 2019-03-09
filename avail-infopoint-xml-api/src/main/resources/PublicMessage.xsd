@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified"
+           targetNamespace="http://schemas.datacontract.org/2004/07/Availtec.MyAvail.TIDS.DataManager.Models"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+
+    <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"
+               schemaLocation="https://api.microsofttranslator.com/V2/soap.svc?xsd=xsd2"/>
+
+    <xs:complexType name="PublicMessageType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="ChannelMessages"/>
+            <xs:element type="xs:string" name="DaysOfWeek"/>
+            <xs:element type="xs:dateTime" name="FromDate"/>
+            <xs:element type="xs:dateTime" name="FromTime"/>
+            <xs:element type="xs:string" name="Message"/>
+            <xs:element type="xs:int" name="MessageId"/>
+            <xs:element type="xs:string" name="MessageTranslations"/>
+            <xs:element type="xs:string" name="Priority"/>
+            <xs:element type="xs:int" name="PublicAccess"/>
+            <xs:element type="xs:boolean" name="Published"/>
+            <xs:element type="arr:ArrayOfint" name="Routes"/>
+            <xs:element type="arr:ArrayOfint" name="Signs"/>
+            <xs:element type="xs:dateTime" name="ToDate"/>
+            <xs:element type="xs:dateTime" name="ToTime"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
+

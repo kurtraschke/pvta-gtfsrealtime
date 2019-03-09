@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified"
+           targetNamespace="http://schemas.datacontract.org/2004/07/Availtec.MyAvail.TIDS.DataManager.Models"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://schemas.datacontract.org/2004/07/Availtec.MyAvail.TIDS.DataManager.Models">
+
+    <xs:include schemaLocation="VehicleLocation.xsd"/>
+
+    <xs:element name="ArrayOfVehicleLocation">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element type="tns:VehicleLocationType" name="VehicleLocation" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified"
+           targetNamespace="http://schemas.datacontract.org/2004/07/Availtec.MyAvail.TIDS.DataManager.Models"
+           xmlns:tns="http://schemas.datacontract.org/2004/07/Availtec.MyAvail.TIDS.DataManager.Models"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:include schemaLocation="PublicMessage.xsd"/>
+    <xs:include schemaLocation="VehicleLocation.xsd"/>
+
+    <xs:complexType name="RouteType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="Color"/>
+            <xs:element type="xs:string" name="Directions" nillable="true"/>
+            <xs:element type="xs:string" name="GoogleDescription"/>
+            <xs:element type="xs:string" name="Group" nillable="true"/>
+            <xs:element type="xs:boolean" name="IncludeInGoogle"/>
+            <xs:element type="xs:string" name="IsHeadway"/>
+            <xs:element type="xs:boolean" name="IsVisible"/>
+            <xs:element type="xs:string" name="IvrDescription"/>
+            <xs:element type="xs:string" name="LongName"/>
+            <xs:element name="Messages">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element type="tns:PublicMessageType" name="PublicMessage" maxOccurs="unbounded"
+                                    minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element type="xs:string" name="RouteAbbreviation"/>
+            <xs:element type="xs:int" name="RouteId"/>
+            <xs:element type="xs:int" name="RouteRecordId"/>
+            <!--<xs:element type="xs:string" name="RouteStops" nillable="true"/>-->
+            <xs:element type="xs:string" name="RouteTraceFilename"/>
+            <xs:element type="xs:string" name="RouteTraceHash64" nillable="true"/>
+            <xs:element type="xs:string" name="ShortName"/>
+            <xs:element type="xs:int" name="SortOrder"/>
+            <!--<xs:element type="xs:string" name="Stops" nillable="true"/>-->
+            <xs:element type="xs:string" name="TextColor"/>
+            <xs:element name="Vehicles">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element type="tns:VehicleLocationType" name="VehicleLocation" maxOccurs="unbounded"
+                                    minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="ArrayOfRoute">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element type="tns:RouteType" name="Route" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

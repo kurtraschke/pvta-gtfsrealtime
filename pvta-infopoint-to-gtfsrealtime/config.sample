@@ -1,0 +1,7 @@
+PVTA.gtfsPath=gtfs.zip
+apiBaseUrl=https://bustracker.pvta.com/
+vehiclePositions.url=http://localhost:8080/vehiclePositions
+tripUpdates.url=http://localhost:8080/tripUpdates
+alerts.url=http://localhost:8080/alerts
+refreshRate.vehicles=30
+refreshRate.alerts=60

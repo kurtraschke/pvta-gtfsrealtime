@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="avail-infopoint-client" />
+        <module name="avail-infopoint-xml-api" />
+        <module name="pvta-infopoint-to-gtfsrealtime" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="avail-infopoint-client" options="-Xlint:all" />
+      <module name="avail-infopoint-xml-api" options="-Xlint:all" />
+      <module name="pvta-infopoint-to-gtfsrealtime" options="-Xlint:all" />
+    </option>
+  </component>
+</project>
